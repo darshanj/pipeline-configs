@@ -6,7 +6,7 @@ spec:
   ports:
   - name: pgql
     port: 5432
-    nodePort: 35432
+    nodePort: 30501
     targetPort: 5432
     protocol: TCP
   selector:
