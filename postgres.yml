@@ -1,20 +1,4 @@
 apiVersion: v1
-kind: Service
-metadata:
-  name: postgres
-spec:
-  ports:
-  - name: pgql
-    port: 5432
-    nodePort: 30501
-    targetPort: 5432
-    protocol: TCP
-  selector:
-    app: postgres
-  type: NodePort
-
----
-apiVersion: v1
 kind: ReplicationController
 metadata:
   name: postgres
@@ -45,4 +29,3 @@ spec:
       volumes:
         - name: pg-data
           emptyDir: {}
-        - ./db/seed.sql:/docker-entrypoint-initdb.d/seed.sql
