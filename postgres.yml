@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: latest
+          image: postgres
           env:
             - name: POSTGRES_USER
               value: test
