@@ -30,11 +30,11 @@ spec:
           image: postgres:9.4
           env:
             - name: POSTGRES_USER
-              value: kong
+              value: admin
             - name: POSTGRES_PASSWORD
-              value: kong
+              value: admin
             - name: POSTGRES_DB
-              value: kong
+              value: admin
             - name: PGDATA
               value: /var/lib/postgresql/data/pgdata
           ports:
@@ -45,3 +45,4 @@ spec:
       volumes:
         - name: pg-data
           emptyDir: {}
+        - ./db/seed.sql:/docker-entrypoint-initdb.d/seed.sql
