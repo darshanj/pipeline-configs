@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: postgres
+          image: darshanj/postgres
           env:
             - name: POSTGRES_USER
               value: test
