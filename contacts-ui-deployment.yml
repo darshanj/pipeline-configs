@@ -7,10 +7,10 @@ spec:
   template:
     metadata:
       labels:
-        app: CONTACTS_APP_NAME
+        app: contacts-ui
     spec:
       containers:
-        - name: CONTACTS_APP_NAME
+        - name: contacts-ui
           image: CONTACTS_UI_IMAGE
           ports:
             - containerPort: 3000
