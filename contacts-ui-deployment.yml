@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: CONTACTS_APP_NAME
+  name: contacts-ui
 spec:
   replicas: 1
   template:
@@ -10,7 +10,7 @@ spec:
         app: contacts-ui
     spec:
       containers:
-        - name: contacts-ui
+        - name: CONTACTS_APP_NAME
           image: CONTACTS_UI_IMAGE
           ports:
             - containerPort: 3000
